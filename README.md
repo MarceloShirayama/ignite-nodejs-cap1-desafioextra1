@@ -5,7 +5,7 @@
 Nesse desafio, temos uma aplicação Node.js que está em processo de desenvolvimento mas que já possui os testes necessários para fazer toda a validação dos requisitos (você não deve mexer nos testes).
 Após algumas alterações no código da aplicação, parte dos testes deixaram de passar e agora só você pode resolver esse problema. Bora lá? 🚀
 
-Essa aplicação realiza o CRUD (**C**reate, **R**ead, **U**pdate, **D**elete) de repositórios de projetos. Além disso, é possível dar likes em repositórios cadastrados, aumentando a quantidade de likes em 1 a cada vez que a rota é chamada.
+Essa aplicação realiza o CRUD (Create, Read, Update, Delete) de repositórios de projetos. Além disso, é possível dar likes em repositórios cadastrados, aumentando a quantidade de likes em 1 a cada vez que a rota é chamada.
 
 A estrutura de um repositório ao ser criado é a seguinte:
 
@@ -52,21 +52,15 @@ A rota deve receber, pelo parâmetro da rota, o `id` do repositório que deve se
 
 A rota deve receber, pelo parâmetro da rota, o `id` do repositório que deve receber o like e retornar o repositório com a quantidade de likes atualizada.
 
-## Específicação dos testes
+## Especificação dos testes
 
 Em cada teste, tem uma breve descrição no que sua aplicação deve cumprir para que o teste passe.
 
-<aside>
-⚠️ Note que partes da aplicação já estão prontas e você precisará alterar apenas o que está errado (ou implementar algo que esteja faltando). 
+⚠️ Note que partes da aplicação já estão prontas e você precisará alterar apenas o que está errado (ou implementar algo que esteja faltando).
 
 Se você achou algum trecho de código confuso ou pensou em uma melhor solução, sinta-se livre para também refatorar.
 
-</aside>
-
-<aside>
-💡 Caso você tenha dúvidas quanto ao que são os testes, e como interpretá-los, dê uma olhada em **[nosso FAQ](https://www.notion.so/FAQ-Desafios-ddd8fcdf2339436a816a0d9e45767664)**
-
-</aside>
+💡 Caso você tenha dúvidas quanto ao que são os testes, e como interpretá-los, dê uma olhada em     [nosso FAQ](https://www.notion.so/FAQ-Desafios-ddd8fcdf2339436a816a0d9e45767664)
 
 Para esse desafio, temos os seguintes testes:
 
@@ -74,7 +68,7 @@ Para esse desafio, temos os seguintes testes:
 
 - **Should be able to create a new repository**
 
-Para que esse teste passe, você deve permitir que um novo repositório seja cadastrado pela rota **POST** `/repositories`. Caso precise confirmar o formato do objeto, você pode olhar [aqui.](https://www.notion.so/Desafio-03-Corrigindo-o-c-digo-c15c8a2e212846039a367cc7b763c6dd) 
+Para que esse teste passe, você deve permitir que um novo repositório seja cadastrado pela rota **POST** `/repositories`. Caso precise confirmar o formato do objeto, você pode olhar [aqui](https://www.notion.so/Desafio-03-Corrigindo-o-c-digo-c15c8a2e212846039a367cc7b763c6dd).
 
 Também é necessário que você retorne a resposta com o código `201`.
 
@@ -108,7 +102,7 @@ Por exemplo:
 	likes: 0
 }
 
-// Requisição para alterar informações: 
+// Requisição para alterar informações:
 // Rota: "/repositories/c160a99b-9d3b-4669-8a35-8dce1e8196ec"
 // Método: PUT
 // Corpo: { title: "Novo título", likes: 10 }
@@ -136,7 +130,7 @@ Por exemplo:
 	likes: 0
 }
 
-// Requisição para alterar informações: 
+// Requisição para alterar informações:
 // Rota: "/repositories/c160a99b-9d3b-4669-8a35-8dce1e8196ec"
 // Método: PUT
 // Corpo: { title: "Novo título", likes: 10 }
