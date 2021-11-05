@@ -4,7 +4,7 @@ const app = require("../");
 const { validate: isUuid } = require("uuid");
 
 describe("Projects", () => {
-  it("should be able to create a new repository", async () => {
+  it.skip("should be able to create a new repository", async () => {
     const response = await request(app)
       .post("/repositories")
       .send({
@@ -37,7 +37,7 @@ describe("Projects", () => {
     );
   });
 
-  it("should be able to list the projects", async () => {
+  it.skip("should be able to list the projects", async () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
@@ -61,7 +61,7 @@ describe("Projects", () => {
     );
   });
 
-  it("should be able to update repository", async () => {
+  it.skip("should be able to update repository", async () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
@@ -93,7 +93,7 @@ describe("Projects", () => {
       .expect(404);
   });
 
-  it("should not be able to update repository likes manually", async () => {
+  it.skip("should not be able to update repository likes manually", async () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
@@ -133,7 +133,7 @@ describe("Projects", () => {
     expect(repository).toBe(false);
   });
 
-  it("should not be able to delete a non existing repository", async () => {
+  it.skip("should not be able to delete a non existing repository", async () => {
     await request(app)
       .delete(`/repositories/123`)
       .expect(404);
