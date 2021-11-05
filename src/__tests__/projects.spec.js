@@ -4,7 +4,7 @@ const app = require("../");
 const { validate: isUuid } = require("uuid");
 
 describe("Projects", () => {
-  it.skip("should be able to create a new repository", async () => {
+  it("should be able to create a new repository", async () => {
     const response = await request(app)
       .post("/repositories")
       .send({
