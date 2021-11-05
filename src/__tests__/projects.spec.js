@@ -37,7 +37,7 @@ describe("Projects", () => {
     );
   });
 
-  it.skip("should be able to list the projects", async () => {
+  it("should be able to list the projects", async () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
@@ -61,7 +61,7 @@ describe("Projects", () => {
     );
   });
 
-  it.skip("should be able to update repository", async () => {
+  it("should be able to update repository", async () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
@@ -93,7 +93,7 @@ describe("Projects", () => {
       .expect(404);
   });
 
-  it.skip("should not be able to update repository likes manually", async () => {
+  it("should not be able to update repository likes manually", async () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
@@ -133,7 +133,7 @@ describe("Projects", () => {
     expect(repository).toBe(false);
   });
 
-  it.skip("should not be able to delete a non existing repository", async () => {
+  it("should not be able to delete a non existing repository", async () => {
     await request(app)
       .delete(`/repositories/123`)
       .expect(404);

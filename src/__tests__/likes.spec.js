@@ -2,7 +2,7 @@ const request = require("supertest");
 const app = require("../");
 
 describe("Likes", () => {
-  it.skip("should be able to give a like to the repository", async () => {
+  it("should be able to give a like to the repository", async () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
